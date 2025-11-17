@@ -33,7 +33,7 @@ export default function ReportBuilder() {
     courseName: '',
     batchCode: '',
     timing: '',
-    test:'',
+    test: '',
     assignment: '',
     behaviour: '',
     presentation: '',
@@ -47,7 +47,6 @@ export default function ReportBuilder() {
     attendancePercentage: '',
   });
 
-  // ✅ Field toggle states
   const [activeFields, setActiveFields] = useState({
     test: true,
     assignment: true,
@@ -65,7 +64,7 @@ export default function ReportBuilder() {
 
       // ✅ Only sum active fields
       const scores = Object.entries(activeFields)
-        .filter(([, isActive]) => isActive)
+        .filter(([, isActive]) => isActive) // fixed: removed unused `_`
         .map(([key]) => Number(updatedData[key as keyof ReportData]) || 0);
 
       const total = scores.reduce((sum, val) => sum + val, 0);
@@ -215,4 +214,3 @@ export default function ReportBuilder() {
     </div>
   );
 }
-
