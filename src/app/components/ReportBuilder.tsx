@@ -65,7 +65,7 @@ export default function ReportBuilder() {
 
       // ✅ Only sum active fields
       const scores = Object.entries(activeFields)
-        .filter(([_, isActive]) => isActive)
+        .filter(([, isActive]) => isActive)
         .map(([key]) => Number(updatedData[key as keyof ReportData]) || 0);
 
       const total = scores.reduce((sum, val) => sum + val, 0);
@@ -215,3 +215,4 @@ export default function ReportBuilder() {
     </div>
   );
 }
+
