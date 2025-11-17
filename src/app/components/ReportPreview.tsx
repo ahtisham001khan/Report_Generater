@@ -72,7 +72,7 @@ export default function ReportPreview({ data, studentPhotoUrl, activeFields }: P
             <td className="border p-2">{data.studentName || '—'}</td>
           </tr>
           <tr>
-            <td className="border p-2">Father's Name</td>
+            <td className="border p-2">Father&apos;s Name</td>
             <td className="border p-2">{data.fatherName || '—'}</td>
           </tr>
           <tr>
@@ -147,5 +147,6 @@ export default function ReportPreview({ data, studentPhotoUrl, activeFields }: P
     </div>
   );
 }
+
 
 
