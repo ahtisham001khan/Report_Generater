@@ -15,7 +15,7 @@ export default function ReportPreview({ data, studentPhotoUrl, activeFields }: P
   const absentDays = totalDays - presentDays >= 0 ? totalDays - presentDays : 0;
 
   const academicRows = Object.entries(activeFields)
-    .filter(([_, isActive]) => isActive)
+    .filter(([, isActive]) => isActive)
     .map(([key]) => (
       <tr key={key}>
         <td className="border p-2 capitalize">{key}</td>
@@ -147,4 +147,5 @@ export default function ReportPreview({ data, studentPhotoUrl, activeFields }: P
     </div>
   );
 }
+
 
