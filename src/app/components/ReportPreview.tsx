@@ -52,7 +52,7 @@ export default function ReportPreview({ data, studentPhotoUrl, activeFields }: P
         </p>
         {studentPhotoUrl && (
           <div className="h-[80px] w-[80px] rounded-lg overflow-hidden border border-[#3498db]/30">
-            <img src={studentPhotoUrl} alt="Student" className="w-full h-full object-cover" />
+            <Image src={studentPhotoUrl} alt="Student" className="w-full h-full object-cover" />
           </div>
         )}
       </div>
@@ -147,3 +147,4 @@ export default function ReportPreview({ data, studentPhotoUrl, activeFields }: P
     </div>
   );
 }
+
